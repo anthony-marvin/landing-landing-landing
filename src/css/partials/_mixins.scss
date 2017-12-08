@@ -1,0 +1,35 @@
+// media query conditionals
+@mixin large-screen( $large-screen-break: 1921px ) {
+  @media(min-width: $large-screen-break ) {
+    @content;
+  }
+}
+@mixin large-phone-landscape( $first-break: 991px ) {
+	@media ( max-width: $first-break ) and ( orientation: landscape ) {
+		@content;
+	}
+}
+
+@mixin tablet( $first-break: 991px )  {
+	@media ( max-width: $first-break ) {
+		@content;
+	}
+}
+
+@mixin phone-landscape( $second-break: 767px ) {
+	@media ( max-width: $second-break ) and ( orientation: landscape ) {
+		@content;
+	}
+}
+
+@mixin large-phone( $second-break: 767px ) {
+	@media ( max-width: $second-break ) {
+		@content;
+	}
+}
+
+@mixin phone( $third-break: 479px ) {
+	@media( max-width: $third-break ) {
+		@content;
+	}
+}

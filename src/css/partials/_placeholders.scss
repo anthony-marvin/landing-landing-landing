@@ -1,0 +1,38 @@
+/* placeholder classes */
+@import "variables";
+/* Wordpress Default Align */
+%alignnone {
+	margin: $alignnone;
+}
+%aligncenter {
+    display: block;
+    margin: $aligncenter;
+}
+%alignright {
+    float:right;
+    margin: $alignright;
+}
+%alignleft {
+	float: left;
+	margin: $alignleft;
+}
+
+/* Transitional placeholder class */
+%trans {
+	-webkit-transition: $trans;
+	transition: $trans;
+}
+
+/* Box Shadows */
+%box-shadow-hover {
+	-webkit-box-shadow: $box-shadow;
+	        box-shadow: $box-shadow;
+					&:hover {
+						-webkit-box-shadow: 0 0 0;
+										box-shadow: 0 0 0;
+					}
+}
+%box-shadow {
+	-webkit-box-shadow: $box-shadow;
+					box-shadow: $box-shadow;
+}

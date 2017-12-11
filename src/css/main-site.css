@@ -3,19 +3,13 @@ body {
   font-family: Roboto, sans-serif;
   color: #333;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.5;
 }
 
 .navbar {
   position: absolute;
   display: block;
   width: 100%;
-  border-style: solid solid none;
-  border-width: 1px;
-  border-color: rgba(60, 35, 20, 0.35);
-  background-color: transparent;
-  box-shadow: none;
-  color: #3c2314;
 }
 
 .logo {
@@ -34,48 +28,92 @@ body {
   float: none;
 }
 
-.navlink {
+@media (max-width: 991px) {
+  .logo {
+    width: 300px;
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo {
+    width: 180px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    padding-left: 0px;
+  }
+}
+
+.navmenu__link {
   margin-right: 0px;
   margin-left: 0px;
   padding: 15px 1vw;
   font-family: 'Roboto Condensed', sans-serif;
   color: #fff;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.125;
   font-weight: 300;
   text-transform: uppercase;
 }
 
-.navlink:hover {
+.navmenu__link:hover {
   background-color: transparent;
-  color: #00d9f3;
+  color: #c7ddf3;
 }
 
-.navlink.w--current {
-  color: #00d9f3;
+.navmenu__link.w--current {
+  color: #c7ddf3;
+}
+
+@media (max-width: 767px) {
+  .navmenu__link {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }
 
 .navmenu {
   width: 100%;
   border-bottom: 1px none rgba(4, 105, 58, 0.14);
-  background-color: #8a1e04;
+  background-color: #000;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.18);
   text-align: center;
-}
-
-.navmenu.scroll {
-  background-color: #8a1e04;
 }
 
 .main_section {
   height: 100%;
 }
 
-.why_king_lasik_section {
+@media (max-width: 767px) {
+  .main_section {
+    position: relative;
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16)), url("../images/main_bg_img_mobile.jpg");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16)), url("../images/main_bg_img_mobile.jpg");
+    background-position: 0px 0px, 50% 100%;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+  }
+}
+
+@media (max-width: 479px) {
+  .main_section {
+    height: 80%;
+  }
+}
+
+.why_section {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #e4fafa;
   text-align: center;
+}
+
+@media (max-width: 479px) {
+  .why_section {
+    padding-top: 75px;
+    padding-bottom: 50px;
+  }
 }
 
 .container_div {
@@ -83,26 +121,45 @@ body {
   width: 80%;
 }
 
+@media (max-width: 991px) {
+  .container_div {
+    width: 90%;
+  }
+}
+
 .section_headline {
   margin-top: 0px;
   margin-bottom: 50px;
-  color: #8a1e04;
+  color: #000;
   font-size: 48px;
+  line-height: 1.125;
   font-style: normal;
   font-weight: 300;
   text-align: left;
 }
 
 .section_headline.center {
-  color: #8a1e04;
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .section_headline {
+    margin-bottom: 30px;
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 479px) {
+  .section_headline {
+    font-size: 30px;
+  }
 }
 
 .section_text {
   margin-bottom: 30px;
   color: #58483e;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 1.5;
   font-weight: 300;
   text-align: left;
 }
@@ -112,13 +169,26 @@ body {
   border-right: 5px none rgba(0, 0, 0, 0.05);
 }
 
-.what_is_lasik {
+@media (max-width: 767px) {
+  .section_text.king {
+    padding-right: 0px;
+  }
+}
+
+.what_is_section {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #fff;
   text-align: center;
+}
+
+@media (max-width: 479px) {
+  .what_is_section {
+    padding-top: 50px;
+    padding-bottom: 75px;
+  }
 }
 
 .blade_free_lasik {
@@ -128,17 +198,51 @@ body {
   text-align: center;
 }
 
-.lasik_selftest_section {
+@media (max-width: 767px) {
+  .blade_free_lasik {
+    padding-top: 75px;
+    padding-bottom: 0px;
+  }
+}
+
+.selftest_section {
   padding-top: 100px;
   padding-bottom: 150px;
   background-color: #e4fafa;
   text-align: center;
 }
 
+@media (max-width: 991px) {
+  .selftest_section {
+    padding-top: 50px;
+    padding-bottom: 75px;
+  }
+}
+
+@media (max-width: 767px) {
+  .selftest_section {
+    padding-bottom: 50px;
+  }
+}
+
 .financing_section {
   padding-top: 100px;
   padding-bottom: 200px;
   text-align: center;
+}
+
+@media (max-width: 991px) {
+  .financing_section {
+    padding-top: 75px;
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .financing_section {
+    padding-top: 50px;
+    padding-bottom: 75px;
+  }
 }
 
 .locations_section {
@@ -151,11 +255,48 @@ body {
   background-attachment: scroll, fixed;
 }
 
+@media (max-width: 991px) {
+  .locations_section {
+    padding-right: 31px;
+    padding-left: 31px;
+  }
+}
+
+@media (max-width: 767px) {
+  .locations_section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}
+
+@media (max-width: 479px) {
+  .locations_section {
+    padding-top: 50px;
+    padding-right: 21px;
+    padding-left: 21px;
+  }
+}
+
 .locations_container {
   padding-right: 0px;
   padding-left: 0px;
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  .locations_container {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 479px) {
+  .locations_container {
+    flex-direction: column;
+  }
 }
 
 .location_div {
@@ -166,6 +307,29 @@ body {
   justify-content: space-between;
 }
 
+@media (max-width: 991px) {
+  .location_div {
+    width: 45%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .location_div {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 479px) {
+  .location_div {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
 .location_headline {
   height: 60px;
   margin-top: 0px;
@@ -173,7 +337,7 @@ body {
   border-bottom: 1px solid rgba(201, 230, 162, 0.4);
   color: #fff;
   font-size: 26px;
-  line-height: 28px;
+  line-height: 1.125;
   font-weight: 300;
 }
 
@@ -182,6 +346,18 @@ body {
   color: #fff;
   font-size: 16px;
   font-weight: 100;
+}
+
+@media (max-width: 991px) {
+  .address_txt {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 479px) {
+  .address_txt {
+    font-weight: 300;
+  }
 }
 
 .location_phone_link {
@@ -208,14 +384,34 @@ body {
 .footer_section {
   padding: 100px 80px 150px;
   border-top: 1px solid rgba(96, 56, 19, 0.22);
-  background-color: #8a1e04;
+  background-color: #c7ddf3;
   background-image: none;
   text-align: left;
+}
+
+@media (max-width: 991px) {
+  .footer_section {
+    padding-right: 57px;
+    padding-left: 57px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer_section {
+    padding: 50px 20px 75px;
+  }
 }
 
 .footer_div {
   width: 40%;
   float: left;
+}
+
+@media (max-width: 479px) {
+  .footer_div {
+    width: 100%;
+    margin-bottom: 40px;
+  }
 }
 
 .footer_text {
@@ -224,31 +420,23 @@ body {
   font-size: 12px;
 }
 
-.king_column {
-  border-left: 5px none rgba(119, 124, 110, 0.18);
-  text-align: right;
-}
-
-.king_column_text {
-  padding-top: 49px;
-  padding-right: 0px;
-  text-align: left;
-}
-
 .learn_more_btn {
   padding: 12px 55px 12px 30px;
-  border: 2px none #c9e6a2;
-  border-radius: 30px;
-  background-color: #00aca2;
   background-image: url("../images/arrow_white.png");
   background-position: 89% 50%;
   background-repeat: no-repeat;
   text-transform: uppercase;
   text-shadow: none;
+  margin: 5px;
+  line-height: 1.125;
+  background-color: #c7ddf3;
+  color: #000;
+  border: 2px solid #c7ddf3;
 }
 
 .learn_more_btn:hover {
-  background-color: #008d85;
+  background-color: #000;
+  color: #c7ddf3;
 }
 
 .learn_more_btn.top_padding {
@@ -259,16 +447,14 @@ body {
   background-position: 95% 50%;
 }
 
-.left_column {
-  text-align: left;
-}
-
-.left_column._2 {
-  padding-left: 25px;
-}
-
-.right_column {
-  text-align: right;
+@media (max-width: 479px) {
+  .learn_more_btn.top_padding {
+    margin-top: 0px;
+  }
+  .learn_more_btn.lasik_test {
+    margin-top: 1px;
+    font-size: 12px;
+  }
 }
 
 .bg_video {
@@ -276,7 +462,13 @@ body {
   background-image: none;
 }
 
-.top_phone_div {
+@media (max-width: 767px) {
+  .bg_video {
+    display: none;
+  }
+}
+
+.top_phone {
   position: static;
   top: 65px;
   right: 0px;
@@ -286,11 +478,30 @@ body {
   float: right;
 }
 
-.top_phone_div:hover {
+.top_phone:hover {
   color: #fff;
 }
 
-.top_phone_btn {
+@media (max-width: 991px) {
+  .top_phone {
+    margin-top: 7px;
+  }
+}
+
+@media (max-width: 767px) {
+  .top_phone {
+    padding-right: 5px;
+  }
+}
+
+@media (max-width: 479px) {
+  .top_phone {
+    display: none;
+    padding-right: 0px;
+  }
+}
+
+.top_phone__btn {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -318,13 +529,30 @@ body {
   text-decoration: none;
 }
 
-.top_phone_btn:hover {
+.top_phone__btn:hover {
   color: #fff;
 }
 
-.phone_img {
+@media (max-width: 479px) {
+  .top_phone__btn {
+    margin-bottom: 20px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+.top_phone__img {
   margin-right: 10px;
   color: #00d9f3;
+}
+
+@media (max-width: 767px) {
+  .top_phone__img {
+    width: 15%;
+    margin-right: 5px;
+  }
 }
 
 .small_phone_btn_text {
@@ -335,9 +563,17 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.5;
   font-weight: 300;
   text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .small_phone_btn_text {
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+    font-size: 11px;
+  }
 }
 
 .phone_btn_big_text {
@@ -345,7 +581,16 @@ body {
   margin-top: 5px;
   float: none;
   color: #fff;
-  line-height: 28px;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .phone_btn_big_text {
+    margin-top: 2px;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
 }
 
 .btn_text_holder {
@@ -367,7 +612,26 @@ body {
   text-align: center;
 }
 
-.main_messag_div {
+@media (max-width: 767px) {
+  .lasik_info_kit_div {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 20%;
+    padding-top: 0px;
+    padding-bottom: 15px;
+    background-image: none;
+  }
+}
+
+@media (max-width: 479px) {
+  .lasik_info_kit_div {
+    display: none;
+  }
+}
+
+.main_message {
   position: absolute;
   left: 0px;
   top: 25%;
@@ -381,57 +645,172 @@ body {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.31) 60%, transparent);
 }
 
-.main_headline1 {
+@media (max-width: 991px) {
+  .main_message {
+    top: 25%;
+    width: 65%;
+    padding: 24px 24px 24px 50px;
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.57), transparent);
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.57), transparent);
+  }
+}
+
+@media (max-width: 767px) {
+  .main_message {
+    left: 0px;
+    top: 100px;
+    right: 0px;
+    width: 100%;
+    padding: 10px 10px 20px 15px;
+  }
+  .main_message.mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 479px) {
+  .main_message {
+    position: absolute;
+    top: 61px;
+    display: none;
+    height: auto;
+    padding: 20px;
+  }
+  .main_message.mobile {
+    position: relative;
+    display: block;
+    padding-top: 15px;
+  }
+}
+
+.main_message__headline1 {
   min-height: auto;
   margin-top: 0px;
   background-color: transparent;
   font-family: 'Roboto Condensed', sans-serif;
   color: #fff;
   font-size: 68px;
-  line-height: 56px;
+  line-height: 1.125;
   font-weight: 700;
   letter-spacing: -1px;
   text-transform: none;
   text-shadow: none;
 }
 
-.main_headline2 {
+@media (max-width: 991px) {
+  .main_message__headline1 {
+    color: #b4f858;
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main_message__headline1 {
+    margin-bottom: 5px;
+    font-size: 28px;
+  }
+}
+
+.main_message__headline2 {
   margin-top: 0px;
   margin-bottom: 30px;
   font-family: 'Roboto Condensed', sans-serif;
   color: #fff;
   font-size: 30px;
-  line-height: 34px;
+  line-height: 1.125;
   font-weight: 400;
 }
 
-.main_text {
+@media (max-width: 991px) {
+  .main_message__headline2 {
+    color: #8dc63f;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main_message__headline2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 479px) {
+  .main_message__headline2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.main_message__text {
   margin-bottom: 30px;
   padding-right: 71px;
   color: #fff;
   font-size: 31px;
-  line-height: 28px;
+  line-height: 1.5;
   font-weight: 300;
+}
+
+@media (max-width: 991px) {
+  .main_message__text {
+    color: #fff;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main_message__text {
+    margin-bottom: 10px;
+    padding-right: 0px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 479px) {
+  .main_message__text {
+    font-weight: 300;
+  }
 }
 
 .schedule_app_btn {
   margin-left: 18px;
   padding: 20px 31px 20px 60px;
   border-radius: 30px;
-  background-color: #00aca2;
   background-image: url("../images/white-arrow.png");
   background-position: 10px 50%;
   background-size: 32px;
   background-repeat: no-repeat;
-  color: #fff;
   font-size: 18px;
+  line-height: 1.125;
   font-weight: 400;
   margin-top: 10px;
   text-transform: uppercase;
+  background-color: #c7ddf3;
+  color: #000;
+  border: 2px solid #c7ddf3;
 }
 
 .schedule_app_btn:hover {
-  background-color: #008d85;
+  background-color: #000;
+  color: #c7ddf3;
+}
+
+@media (max-width: 991px) {
+  .schedule_app_btn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .schedule_app_btn {
+    padding: 10px 20px 10px 42px;
+    background-position: 6px 50%;
+    background-size: 30px;
+    font-size: 12px;
+  }
 }
 
 .main_headline3 {
@@ -440,9 +819,28 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   color: #ebfcd5;
   font-size: 50px;
-  line-height: 40px;
+  line-height: 1.125;
   font-weight: 300;
   text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+  .main_headline3 {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main_headline3 {
+    margin-bottom: 30px;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 479px) {
+  .main_headline3 {
+    margin-bottom: 0px;
+  }
 }
 
 .quick_contact_section {
@@ -456,6 +854,13 @@ body {
   text-align: center;
 }
 
+@media (max-width: 991px) {
+  .quick_contact_section {
+    padding-top: 75px;
+    padding-bottom: 50px;
+  }
+}
+
 .quick_form_div {
   display: block;
   width: 65%;
@@ -463,6 +868,13 @@ body {
   margin-left: auto;
   padding-right: 30px;
   float: none;
+}
+
+@media (max-width: 991px) {
+  .quick_form_div {
+    width: 100%;
+    padding-right: 0px;
+  }
 }
 
 .book_img_holder_div {
@@ -473,19 +885,40 @@ body {
   float: right;
 }
 
+@media (max-width: 991px) {
+  .book_img_holder_div {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-top: 19px;
+  }
+}
+
 .book_img_div {
   position: absolute;
   left: 0px;
   top: 0px;
 }
 
+@media (max-width: 991px) {
+  .book_img_div {
+    position: static;
+  }
+}
+
 .quick_form_headline {
   margin-bottom: 25px;
   color: #fff;
   font-size: 24px;
-  line-height: 32px;
+  line-height: 1.125;
   font-weight: 100;
   text-align: center;
+}
+
+@media (max-width: 991px) {
+  .quick_form_headline {
+    text-align: center;
+  }
 }
 
 .quick_form_headline_bold {
@@ -507,17 +940,35 @@ body {
   color: #04693a;
 }
 
+@media (max-width: 991px) {
+  .text_field {
+    width: 400px;
+    margin-right: 5px;
+  }
+}
+
 .submit_btn {
   display: block;
   width: 250px;
   border-radius: 20px;
-  background-color: #00aca2;
+  background-color: #c7ddf3;
+  color: #000;
+  border: 2px solid #c7ddf3;
   text-transform: uppercase;
+  line-height: 1.125;
 }
 
 .submit_btn:hover {
-  background-color: #008d85;
-  color: #fff;
+  background-color: #000;
+  color: #c7ddf3;
+}
+
+@media (max-width: 991px) {
+  .submit_btn {
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .form_div {
@@ -534,10 +985,30 @@ body {
   flex-wrap: wrap;
 }
 
+@media (max-width: 991px) {
+  .form_div {
+    width: auto;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
+
 .review_section {
   padding-top: 100px;
   padding-bottom: 200px;
   text-align: center;
+}
+
+@media (max-width: 991px) {
+  .review_section {
+    padding-bottom: 75px;
+  }
 }
 
 .testimonials_holder_div {
@@ -552,6 +1023,16 @@ body {
   justify-content: center;
 }
 
+@media (max-width: 991px) {
+  .testimonials_holder_div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 .testimonial_div {
   width: 33%;
   padding-right: 30px;
@@ -559,9 +1040,23 @@ body {
   padding-left: 30px;
 }
 
+@media (max-width: 991px) {
+  .testimonial_div {
+    width: 100%;
+    margin-bottom: 36px;
+  }
+}
+
 .middle {
   border-right: 1px dashed rgba(137, 147, 123, 0.27);
   border-left: 1px dashed rgba(137, 147, 123, 0.27);
+}
+
+@media (max-width: 991px) {
+  .middle {
+    border-right-style: none;
+    border-left-style: none;
+  }
 }
 
 .testimonials_img {
@@ -571,7 +1066,7 @@ body {
 .testimonials_text {
   color: #2a2a2a;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 1.5;
   font-weight: 300;
 }
 
@@ -580,25 +1075,12 @@ body {
   margin-bottom: 20px;
   padding-bottom: 10px;
   color: #8a1e04;
-  line-height: 26px;
+  line-height: 1.125;
   font-weight: 100;
 }
 
 .name_smaller {
   font-size: 18px;
-}
-
-.success_msg {
-  background-color: transparent;
-  color: #d2fd98;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.error_msg {
-  background-color: transparent;
-  color: #830808;
-  text-align: left;
 }
 
 .locations_icon_div {
@@ -607,17 +1089,45 @@ body {
   margin-left: 20px;
 }
 
+@media (max-width: 991px) {
+  .locations_icon_div {
+    width: 45%;
+  }
+}
+
+@media (max-width: 479px) {
+  .locations_icon_div {
+    width: 100%;
+    margin-right: auto;
+    margin-bottom: 36px;
+    margin-left: auto;
+    text-align: center;
+  }
+}
+
 .locations_headline {
   margin-top: 13px;
   margin-bottom: 0px;
   color: #fff;
   font-size: 56px;
-  line-height: 50px;
+  line-height: 1.125;
   font-weight: 100;
+}
+
+@media (max-width: 991px) {
+  .locations_headline {
+    font-size: 36px;
+  }
 }
 
 .scroll_div {
   display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .scroll_div {
+    display: none;
+  }
 }
 
 .scroll_text {
@@ -634,6 +1144,20 @@ body {
   width: 40%;
   float: right;
   text-align: right;
+}
+
+@media (max-width: 767px) {
+  .social_media_div {
+    width: 50%;
+  }
+}
+
+@media (max-width: 479px) {
+  .social_media_div {
+    width: 100%;
+    margin-bottom: 14px;
+    text-align: right;
+  }
 }
 
 .bottom_phone {
@@ -667,7 +1191,7 @@ body {
 .social_media_headline {
   color: #fff;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 1.125;
   font-weight: 300;
 }
 
@@ -678,7 +1202,7 @@ body {
 }
 
 .social_media_btn:hover {
-  opacity: 0.59;
+  opacity: 0.5;
 }
 
 .lasik_test_div {
@@ -687,16 +1211,56 @@ body {
   text-align: left;
 }
 
+@media (max-width: 991px) {
+  .lasik_test_div {
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .lasik_test_div {
+    width: 100%;
+    float: left;
+  }
+}
+
 .lasik_test_img_container {
   position: relative;
   width: 40%;
   float: right;
 }
 
+@media (max-width: 767px) {
+  .lasik_test_img_container {
+    position: static;
+    display: inline-block;
+    width: 40%;
+    float: none;
+  }
+}
+
+@media (max-width: 479px) {
+  .lasik_test_img_container {
+    width: 70%;
+  }
+}
+
 .lasik_test_img_div {
   position: absolute;
   top: -225px;
   right: 0px;
+}
+
+@media (max-width: 991px) {
+  .lasik_test_img_div {
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .lasik_test_img_div {
+    margin-bottom: 21px;
+  }
 }
 
 .phone_tagline_mobile_section {
@@ -707,12 +1271,30 @@ body {
   text-align: center;
 }
 
+@media (max-width: 479px) {
+  .phone_tagline_mobile_section {
+    display: block;
+  }
+}
+
 .navbar_scroll {
   position: fixed;
   left: 0px;
   top: 0px;
   right: 0px;
   display: block;
+}
+
+@media (max-width: 991px) {
+  .navbar_scroll {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 479px) {
+  .navbar_scroll {
+    display: none;
+  }
 }
 
 .scroll_btn {
@@ -776,53 +1358,7 @@ body {
   background-attachment: fixed;
 }
 
-@media (min-width: 1921px) {
-  .bridge-parallax {
-    background-image: url("../images/bridge-parallax.jpg-2560");
-  }
-}
-
-@media (max-width: 991px) {
-  .bridge-parallax {
-    background-image: url("../images/bridge-parallax-991.jpg");
-    background-attachment: scroll;
-  }
-}
-
-@media (max-width: 767px) {
-  .bridge-parallax {
-    background-image: url("../images/bridge-parallax-767.jpg");
-  }
-}
-
-@media (max-width: 479px) {
-  .bridge-parallax {
-    background-image: url("../images/bridge-parallax-479.jpg");
-  }
-}
-
-html.w-mod-js *[data-ix="slide-left"] {
-  opacity: 0;
-  -webkit-transform: translate(67px, 0px);
-  -ms-transform: translate(67px, 0px);
-  transform: translate(67px, 0px);
-}
-
-html.w-mod-js *[data-ix="slide-left-2"] {
-  opacity: 0;
-  -webkit-transform: translate(67px, 0px);
-  -ms-transform: translate(67px, 0px);
-  transform: translate(67px, 0px);
-}
-
-html.w-mod-js *[data-ix="slide-left-3"] {
-  opacity: 0;
-  -webkit-transform: translate(67px, 0px);
-  -ms-transform: translate(67px, 0px);
-  transform: translate(67px, 0px);
-}
-
-html.w-mod-js *[data-ix="slide-left-4"] {
+html.w-mod-js *[data-ix="slide-left"], html.w-mod-js *[data-ix="slide-left-2"], html.w-mod-js *[data-ix="slide-left-3"], html.w-mod-js *[data-ix="slide-left-3"] {
   opacity: 0;
   -webkit-transform: translate(67px, 0px);
   -ms-transform: translate(67px, 0px);
@@ -843,159 +1379,6 @@ html.w-mod-js *[data-ix="scroll-navbar-zero"] {
 }
 
 @media (max-width: 991px) {
-  .logo {
-    width: 300px;
-    margin-left: 25px;
-  }
-  .container_div {
-    width: 90%;
-  }
-  .lasik_selftest_section {
-    padding-top: 50px;
-    padding-bottom: 75px;
-  }
-  .financing_section {
-    padding-top: 75px;
-    padding-bottom: 100px;
-  }
-  .locations_section {
-    padding-right: 31px;
-    padding-left: 31px;
-  }
-  .locations_container {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-  .location_div {
-    width: 45%;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-  .address_txt {
-    font-size: 14px;
-  }
-  .footer_section {
-    padding-right: 57px;
-    padding-left: 57px;
-  }
-  .king_column {
-    padding-top: 69px;
-  }
-  .king_column_text {
-    padding-top: 0px;
-  }
-  .left_column {
-    margin-bottom: 37px;
-  }
-  .bg_video {
-    background-image: none;
-  }
-  .top_phone_div {
-    margin-top: 7px;
-  }
-  .main_messag_div {
-    top: 25%;
-    width: 65%;
-    padding: 24px 24px 24px 50px;
-    background-color: transparent;
-    background-image: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.57), transparent);
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.57), transparent);
-  }
-  .main_headline1 {
-    color: #b4f858;
-    font-size: 56px;
-  }
-  .main_headline2 {
-    color: #8dc63f;
-    font-size: 24px;
-    line-height: 26px;
-  }
-  .main_text {
-    color: #fff;
-    font-size: 20px;
-    line-height: 26px;
-  }
-  .schedule_app_btn {
-    font-size: 14px;
-  }
-  .main_headline3 {
-    font-size: 56px;
-    line-height: 50px;
-  }
-  .quick_contact_section {
-    padding-top: 75px;
-    padding-bottom: 50px;
-  }
-  .quick_form_div {
-    width: 100%;
-    padding-right: 0px;
-  }
-  .book_img_holder_div {
-    position: static;
-    width: 100%;
-    height: auto;
-    margin-top: 19px;
-  }
-  .book_img_div {
-    position: static;
-  }
-  .quick_form_headline {
-    text-align: center;
-  }
-  .text_field {
-    width: 400px;
-    margin-right: 5px;
-  }
-  .submit_btn {
-    width: 400px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 16px;
-  }
-  .form_div {
-    width: auto;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-  }
-  .review_section {
-    padding-bottom: 75px;
-  }
-  .testimonials_holder_div {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .testimonial_div {
-    width: 100%;
-    margin-bottom: 36px;
-  }
-  .middle {
-    border-right-style: none;
-    border-left-style: none;
-  }
-  .locations_icon_div {
-    width: 45%;
-  }
-  .locations_headline {
-    font-size: 36px;
-    line-height: 36px;
-  }
-  .lasik_test_div {
-    text-align: left;
-  }
-  .lasik_test_img_div {
-    position: static;
-  }
   .manu_btn {
     background-color: #8a1e04;
     color: #fff;
@@ -1003,256 +1386,10 @@ html.w-mod-js *[data-ix="scroll-navbar-zero"] {
   .manu_btn.w--open {
     background-color: #dc232b;
   }
-  .navbar_scroll {
-    background-color: transparent;
-  }
 }
 
 @media (max-width: 767px) {
-  .logo {
-    width: 180px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    padding-left: 0px;
-  }
-  .navlink {
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-  .main_section {
-    position: relative;
-    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16)), url("../images/main_bg_img_mobile.jpg");
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16)), url("../images/main_bg_img_mobile.jpg");
-    background-position: 0px 0px, 50% 100%;
-    background-size: auto, cover;
-    background-repeat: repeat, no-repeat;
-  }
-  .section_headline {
-    margin-bottom: 30px;
-    font-size: 38px;
-    line-height: 38px;
-  }
-  .section_text.king {
-    padding-right: 0px;
-  }
-  .blade_free_lasik {
-    padding-top: 75px;
-    padding-bottom: 0px;
-  }
-  .lasik_selftest_section {
-    padding-bottom: 50px;
-  }
-  .financing_section {
-    padding-top: 50px;
-    padding-bottom: 75px;
-  }
-  .locations_section {
-    padding-top: 75px;
-    padding-bottom: 75px;
-  }
-  .location_div {
-    margin-right: 5px;
-    margin-left: 5px;
-  }
-  .footer_section {
-    padding: 50px 20px 75px;
-  }
-  .bg_video {
-    display: none;
-  }
-  .top_phone_div {
-    padding-right: 5px;
-  }
-  .phone_img {
-    width: 15%;
-    margin-right: 5px;
-  }
-  .small_phone_btn_text {
-    margin-bottom: 2px;
-    padding-bottom: 2px;
-    font-size: 11px;
-  }
-  .phone_btn_big_text {
-    margin-top: 2px;
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-  }
-  .lasik_info_kit_div {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    height: 20%;
-    padding-top: 0px;
-    padding-bottom: 15px;
-    background-image: none;
-  }
-  .main_messag_div {
-    left: 0px;
-    top: 100px;
-    right: 0px;
-    width: 100%;
-    padding: 10px 10px 20px 15px;
-  }
-  .main_messag_div.mobile {
-    display: none;
-  }
-  .main_headline1 {
-    margin-bottom: 5px;
-    font-size: 28px;
-    line-height: 28px;
-  }
-  .main_headline2 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    line-height: 18px;
-  }
-  .main_text {
-    margin-bottom: 10px;
-    padding-right: 0px;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .schedule_app_btn {
-    padding: 10px 20px 10px 42px;
-    background-position: 6px 50%;
-    background-size: 30px;
-    font-size: 12px;
-    line-height: 16px;
-  }
-  .main_headline3 {
-    margin-bottom: 30px;
-    font-size: 26px;
-    line-height: 26px;
-  }
-  .scroll_div {
-    display: none;
-  }
-  .social_media_div {
-    width: 50%;
-  }
-  .lasik_test_div {
-    width: 100%;
-    float: left;
-  }
-  .lasik_test_img_container {
-    position: static;
-    display: inline-block;
-    width: 40%;
-    float: none;
-  }
-  .lasik_test_img_div {
-    margin-bottom: 21px;
-  }
   .column_video {
     margin-bottom: 50px;
-  }
-  .navbar_scroll {
-    display: none;
-  }
-}
-
-@media (max-width: 479px) {
-  .main_section {
-    height: 80%;
-  }
-  .why_king_lasik_section {
-    padding-top: 75px;
-    padding-bottom: 50px;
-  }
-  .section_headline {
-    font-size: 30px;
-    line-height: 34px;
-  }
-  .what_is_lasik {
-    padding-top: 50px;
-    padding-bottom: 75px;
-  }
-  .locations_section {
-    padding-top: 50px;
-    padding-right: 21px;
-    padding-left: 21px;
-  }
-  .locations_container {
-    flex-direction: column;
-  }
-  .location_div {
-    width: 100%;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  .address_txt {
-    font-weight: 300;
-  }
-  .footer_div {
-    width: 100%;
-    margin-bottom: 40px;
-  }
-  .learn_more_btn.top_padding {
-    margin-top: 0px;
-  }
-  .learn_more_btn.lasik_test {
-    margin-top: 1px;
-    font-size: 12px;
-    line-height: 16px;
-  }
-  .top_phone_div {
-    display: none;
-    padding-right: 0px;
-  }
-  .top_phone_btn {
-    margin-bottom: 20px;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-  .lasik_info_kit_div {
-    display: none;
-  }
-  .main_messag_div {
-    position: absolute;
-    top: 61px;
-    display: none;
-    height: auto;
-    padding: 20px;
-  }
-  .main_messag_div.mobile {
-    position: relative;
-    display: block;
-    padding-top: 15px;
-  }
-  .main_headline2 {
-    margin-bottom: 20px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-  }
-  .main_text {
-    font-weight: 300;
-  }
-  .main_headline3 {
-    margin-bottom: 0px;
-  }
-  .locations_icon_div {
-    width: 100%;
-    margin-right: auto;
-    margin-bottom: 36px;
-    margin-left: auto;
-    text-align: center;
-  }
-  .social_media_div {
-    width: 100%;
-    margin-bottom: 14px;
-    text-align: right;
-  }
-  .lasik_test_img_container {
-    width: 70%;
-  }
-  .phone_tagline_mobile_section {
-    display: block;
   }
 }

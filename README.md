@@ -1,12 +1,16 @@
 Glacial Landing Page Based on King LASIK Landing Page.
+
 **Project Maintainer** - Anthony
+
 **TRELLO** - https://trello.com/b/i9aKwuxB/landing-page-templating
-#Generic Landing Page
-##Project Goals
+
+# Generic Landing Page
+
+## Project Goals
  - To Create a sustainable, modular Landing Page System That can be used to create landing pages.
-##Short term goals
+## Short term goals
   - Make markup generic, document build process.
-##Gulp command options
+## Gulp command options
   - gulp concat - concatenates all css files in src/css directory. outputs to dist/css
   - gulp concat-scripts - concatenates all js files in src/js directory. outputs to dist/js
   - gulp imagemin - runs/minifies all images in src/images directory. outputs to dist/images
@@ -15,7 +19,7 @@ Glacial Landing Page Based on King LASIK Landing Page.
   - [ ] TODO: Make gulp watch run all these commands on file change.
   - [ ] TODO: implement gulp-sass
 
-#Instructions
+# Instructions
 1. Using Gulp With this project.
   - a. install Node.js if not installed.
   - b. install node-sass globally through npm

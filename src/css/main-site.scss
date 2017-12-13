@@ -85,20 +85,33 @@ body {
   // }
 }
 
-.main_section {
+.hero {
   height: 100%;
   @include large-phone {
     position: relative;
-    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .16), rgba(0, 0, 0, .16)), url('../images/main_bg_img_mobile.jpg');
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, .16), rgba(0, 0, 0, .16)), url('../images/main_bg_img_mobile.jpg');
-    background-position: 0px 0px, 50% 100%;
-    background-size: auto, cover;
-    background-repeat: repeat, no-repeat;
   }
   @include phone {
     height: 80%;
   }
+  &--bg {
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/#{$hero-background}-1920.jpg');
+    @include large-screen {
+      background-image: url('../images/#{$hero-background}-2560.jpg');
+    }
+    @include tablet {
+      background-image: url('../images/#{$hero-background}-991.jpg');
+    }
+    @include large-phone {
+      background-image: url('../images/#{$hero-background}-767.jpg');
+    }
+    @include phone {
+      background-image: url('../images/#{$hero-background}-479.jpg');
+    }
+  }
 }
+
 
 .why_section {
   padding-top: 100px;
@@ -214,12 +227,6 @@ body {
 
 .locations_section {
   padding: 150px 80px;
-  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('../images/ny-bg.jpg');
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('../images/ny-bg.jpg');
-  background-position: 0px 0px, 50% 50%;
-  background-size: auto, cover;
-  background-repeat: repeat, no-repeat;
-  background-attachment: scroll, fixed;
   @include tablet {
     padding-right: 31px;
     padding-left: 31px;
@@ -233,6 +240,31 @@ body {
     padding-right: 21px;
     padding-left: 21px;
   }
+}
+
+.location--bg {
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('../images/#{$location-background}-1920.jpg');
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('../images/#{$location-background}-1920.jpg');
+  @include large-screen {
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('../images/#{$location-background}-2560.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('../images/#{$location-background}-2560.jpg');
+  }
+  @include tablet {
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('../images/#{$location-background}-991.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('../images/#{$location-background}-991.jpg');
+  }
+  @include large-phone {
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('../images/#{$location-background}-767.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('../images/#{$location-background}-767.jpg');
+  }
+  @include phone {
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('../images/#{$location-background}-479.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('../images/#{$location-background}-479.jpg');
+  }
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  background-attachment: scroll, fixed;
 }
 
 .locations_container {
@@ -257,6 +289,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: auto;
   @include tablet {
     width: 45%;
     margin-right: 10px;
@@ -343,7 +376,7 @@ body {
 
 .footer_text {
   float: none;
-  color: #fff;
+  color: #000;
   font-size: 12px;
 }
 
@@ -595,51 +628,62 @@ body {
       padding-top: 15px;
     }
   }
-}
-
-.main_message__headline1 {
-  min-height: auto;
-  margin-top: 0px;
-  background-color: transparent;
-  font-family: 'Roboto Condensed', sans-serif;
-  color: #fff;
-  font-size: 68px;
-  line-height: 1.125;
-  font-weight: 700;
-  letter-spacing: -1px;
-  text-transform: none;
-  text-shadow: none;
-  @include tablet {
-    color: #b4f858;
-    font-size: 56px;
-  }
-  @include large-phone {
-    margin-bottom: 5px;
-    font-size: 28px;
+  &--mobile_section {
+    display: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #8a1e04;
+    text-align: center;
+    @include phone {
+      display: block;
+    }
   }
 }
 
-.main_message__headline2 {
-  margin-top: 0px;
-  margin-bottom: 30px;
-  font-family: 'Roboto Condensed', sans-serif;
-  color: #fff;
-  font-size: 30px;
-  line-height: 1.125;
-  font-weight: 400;
-  @include tablet {
-    color: #8dc63f;
-    font-size: 24px;
-  }
-  @include large-phone {
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-  @include phone {
-    margin-bottom: 20px;
+.main_message__headline {
+  &--1 {
+    min-height: auto;
+    margin-top: 0px;
+    background-color: transparent;
+    font-family: 'Roboto Condensed', sans-serif;
     color: #fff;
-    font-size: 16px;
+    font-size: 68px;
+    line-height: 1.125;
     font-weight: 700;
+    letter-spacing: -1px;
+    text-transform: none;
+    text-shadow: none;
+    @include tablet {
+      color: #b4f858;
+      font-size: 56px;
+    }
+    @include large-phone {
+      margin-bottom: 5px;
+      font-size: 28px;
+    }
+  }
+  &--2 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.125;
+    font-weight: 400;
+    @include tablet {
+      color: #8dc63f;
+      font-size: 24px;
+    }
+    @include large-phone {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    @include phone {
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+    }
   }
 }
 
@@ -993,13 +1037,10 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #044124;
+  color: $main-site-color-phone;
   font-size: 24px;
   font-weight: 300;
   text-decoration: none;
-  &:hover {
-    color: #8dc63f;
-  }
 }
 
 .bottom_phone_img {
@@ -1007,7 +1048,7 @@ body {
 }
 
 .social_media_headline {
-  color: #fff;
+  color: #000;
   font-size: 16px;
   line-height: 1.125;
   font-weight: 300;
@@ -1059,17 +1100,6 @@ body {
   }
   @include large-phone {
     margin-bottom: 21px;
-  }
-}
-
-.phone_tagline_mobile_section {
-  display: none;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background-color: #8a1e04;
-  text-align: center;
-  @include phone {
-    display: block;
   }
 }
 
@@ -1139,9 +1169,21 @@ body {
   margin-left: auto;
 }
 
-.bridge-parallax {
+.parallax {
   height: 600px;
-  background-image: url('../images/bridge-parallax-1920.jpg');
+  background-image: url('../images/#{$parallax-background}-1920.jpg');
+  @include large-screen {
+    background-image: url( '../images/#{$parallax-background}-2560.jpg' );
+  }
+  @include tablet {
+    background-image: url( '../images/#{$parallax-background}-991.jpg' );
+  }
+  @include large-phone {
+    background-image: url( '../images/#{$parallax-background}-767.jpg' );
+  }
+  @include phone {
+    background-image: url( '../images/#{$parallax-background}-479.jpg' );
+  }
   background-position: 50% 50%;
   background-size: cover;
   background-attachment: fixed;
@@ -1169,10 +1211,10 @@ html.w-mod-js {
 
 .manu_btn {
   @include tablet {
-    background-color:#8a1e04;
+    background-color:$menu-btn-background;
     color:#fff;
     &.w--open {
-      background-color: #dc232b;
+      background-color: lighten($menu-btn-background, 50);
     }
   }
 }

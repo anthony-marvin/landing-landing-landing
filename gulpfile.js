@@ -2,7 +2,7 @@
 var gulp = require('gulp');
 var critical = require('critical');
 var imagemin = require('gulp-imagemin');
-var uncss = require( 'gulp-uncss' );
+// var uncss = require( 'gulp-uncss' ); Not necessary, breaks css
 var concat = require('gulp-concat');
 var url = "https://www.lodenvision.com/landing/lasik-landing-staging/" //CHANGE THIS TO WHATEVER YOU NEED
 gulp.task( 'critical', function(){
@@ -41,14 +41,14 @@ gulp.task( 'critical', function(){
     .pipe(gulp.dest( 'dist/js/' ))
   })
   gulp.task('imagemin', () =>
-  gulp.src('src/images/**/*')
+  gulp.src('src/**/*')
   .pipe(imagemin([
     imagemin.gifsicle({interlaced: true}),
     imagemin.jpegtran({progressive: true}),
     imagemin.optipng({optimizationLevel: 5}),
     imagemin.svgo({plugins: [{removeViewBox: true}]})
   ]))
-  .pipe(gulp.dest('dist/images'))
+  .pipe(gulp.dest('dist/'))
 )
 gulp.task('default', function() {
   // place code for your default task here

@@ -81,24 +81,49 @@ body {
   text-align: center;
 }
 
-.main_section {
+.hero {
   height: 100%;
 }
 
 @media (max-width: 767px) {
-  .main_section {
+  .hero {
     position: relative;
-    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16)), url("../images/main_bg_img_mobile.jpg");
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16)), url("../images/main_bg_img_mobile.jpg");
-    background-position: 0px 0px, 50% 100%;
-    background-size: auto, cover;
-    background-repeat: repeat, no-repeat;
   }
 }
 
 @media (max-width: 479px) {
-  .main_section {
+  .hero {
     height: 80%;
+  }
+}
+
+.hero--bg {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/hero-image-1920.jpg");
+}
+
+@media (min-width: 1921px) {
+  .hero--bg {
+    background-image: url("../images/hero-image-2560.jpg");
+  }
+}
+
+@media (max-width: 991px) {
+  .hero--bg {
+    background-image: url("../images/hero-image-991.jpg");
+  }
+}
+
+@media (max-width: 767px) {
+  .hero--bg {
+    background-image: url("../images/hero-image-767.jpg");
+  }
+}
+
+@media (max-width: 479px) {
+  .hero--bg {
+    background-image: url("../images/hero-image-479.jpg");
   }
 }
 
@@ -247,12 +272,6 @@ body {
 
 .locations_section {
   padding: 150px 80px;
-  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/ny-bg.jpg");
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/ny-bg.jpg");
-  background-position: 0px 0px, 50% 50%;
-  background-size: auto, cover;
-  background-repeat: repeat, no-repeat;
-  background-attachment: scroll, fixed;
 }
 
 @media (max-width: 991px) {
@@ -274,6 +293,43 @@ body {
     padding-top: 50px;
     padding-right: 21px;
     padding-left: 21px;
+  }
+}
+
+.location--bg {
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/locations-1920.jpg");
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/locations-1920.jpg");
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  background-attachment: scroll, fixed;
+}
+
+@media (min-width: 1921px) {
+  .location--bg {
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/locations-2560.jpg");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/locations-2560.jpg");
+  }
+}
+
+@media (max-width: 991px) {
+  .location--bg {
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/locations-991.jpg");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/locations-991.jpg");
+  }
+}
+
+@media (max-width: 767px) {
+  .location--bg {
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/locations-767.jpg");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/locations-767.jpg");
+  }
+}
+
+@media (max-width: 479px) {
+  .location--bg {
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/locations-479.jpg");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/locations-479.jpg");
   }
 }
 
@@ -305,6 +361,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: auto;
 }
 
 @media (max-width: 991px) {
@@ -416,7 +473,7 @@ body {
 
 .footer_text {
   float: none;
-  color: #fff;
+  color: #000;
   font-size: 12px;
 }
 
@@ -684,7 +741,21 @@ body {
   }
 }
 
-.main_message__headline1 {
+.main_message--mobile_section {
+  display: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #8a1e04;
+  text-align: center;
+}
+
+@media (max-width: 479px) {
+  .main_message--mobile_section {
+    display: block;
+  }
+}
+
+.main_message__headline--1 {
   min-height: auto;
   margin-top: 0px;
   background-color: transparent;
@@ -699,20 +770,20 @@ body {
 }
 
 @media (max-width: 991px) {
-  .main_message__headline1 {
+  .main_message__headline--1 {
     color: #b4f858;
     font-size: 56px;
   }
 }
 
 @media (max-width: 767px) {
-  .main_message__headline1 {
+  .main_message__headline--1 {
     margin-bottom: 5px;
     font-size: 28px;
   }
 }
 
-.main_message__headline2 {
+.main_message__headline--2 {
   margin-top: 0px;
   margin-bottom: 30px;
   font-family: 'Roboto Condensed', sans-serif;
@@ -723,21 +794,21 @@ body {
 }
 
 @media (max-width: 991px) {
-  .main_message__headline2 {
+  .main_message__headline--2 {
     color: #8dc63f;
     font-size: 24px;
   }
 }
 
 @media (max-width: 767px) {
-  .main_message__headline2 {
+  .main_message__headline--2 {
     margin-bottom: 10px;
     font-size: 18px;
   }
 }
 
 @media (max-width: 479px) {
-  .main_message__headline2 {
+  .main_message__headline--2 {
     margin-bottom: 20px;
     color: #fff;
     font-size: 16px;
@@ -1174,14 +1245,10 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #044124;
+  color: #000;
   font-size: 24px;
   font-weight: 300;
   text-decoration: none;
-}
-
-.bottom_phone:hover {
-  color: #8dc63f;
 }
 
 .bottom_phone_img {
@@ -1189,7 +1256,7 @@ body {
 }
 
 .social_media_headline {
-  color: #fff;
+  color: #000;
   font-size: 16px;
   line-height: 1.125;
   font-weight: 300;
@@ -1260,20 +1327,6 @@ body {
 @media (max-width: 767px) {
   .lasik_test_img_div {
     margin-bottom: 21px;
-  }
-}
-
-.phone_tagline_mobile_section {
-  display: none;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background-color: #8a1e04;
-  text-align: center;
-}
-
-@media (max-width: 479px) {
-  .phone_tagline_mobile_section {
-    display: block;
   }
 }
 
@@ -1350,12 +1403,36 @@ body {
   margin-left: auto;
 }
 
-.bridge-parallax {
+.parallax {
   height: 600px;
-  background-image: url("../images/bridge-parallax-1920.jpg");
+  background-image: url("../images/parallax-1920.jpg");
   background-position: 50% 50%;
   background-size: cover;
   background-attachment: fixed;
+}
+
+@media (min-width: 1921px) {
+  .parallax {
+    background-image: url("../images/parallax-2560.jpg");
+  }
+}
+
+@media (max-width: 991px) {
+  .parallax {
+    background-image: url("../images/parallax-991.jpg");
+  }
+}
+
+@media (max-width: 767px) {
+  .parallax {
+    background-image: url("../images/parallax-767.jpg");
+  }
+}
+
+@media (max-width: 479px) {
+  .parallax {
+    background-image: url("../images/parallax-479.jpg");
+  }
 }
 
 html.w-mod-js *[data-ix="slide-left"], html.w-mod-js *[data-ix="slide-left-2"], html.w-mod-js *[data-ix="slide-left-3"], html.w-mod-js *[data-ix="slide-left-3"] {
@@ -1380,11 +1457,11 @@ html.w-mod-js *[data-ix="scroll-navbar-zero"] {
 
 @media (max-width: 991px) {
   .manu_btn {
-    background-color: #8a1e04;
+    background-color: #000;
     color: #fff;
   }
   .manu_btn.w--open {
-    background-color: #dc232b;
+    background-color: gray;
   }
 }
 

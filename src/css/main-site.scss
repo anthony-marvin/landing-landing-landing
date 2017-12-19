@@ -14,6 +14,7 @@ body {
   position: absolute;
   display: block;
   width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0));
   //added to decouple .navbar from w-nav
   // These aren't necessary
   // border-style: solid solid none;
@@ -91,23 +92,24 @@ body {
     position: relative;
   }
   @include phone {
-    height: 80%;
+    height: 75%;
   }
   &--bg {
     background-size: cover;
     background-position: center;
-    background-image: url('../images/#{$hero-background}-1920.jpg');
+    background-image: url('../images/#{$hero-background}-1920.jpg'), linear-gradient( rgba( 0, 0, 0, .1 ), rgba( 0, 0, 0, .1 ) );
     @include large-screen {
-      background-image: url('../images/#{$hero-background}-2560.jpg');
+      background-image: url('../images/#{$hero-background}-2560.jpg'), linear-gradient( rgba( 0, 0, 0, .1 ), rgba( 0, 0, 0, .1 ) );
     }
     @include tablet {
-      background-image: url('../images/#{$hero-background}-991.jpg');
+      background-image: url('../images/#{$hero-background}-991.jpg'), linear-gradient( rgba( 0, 0, 0, .1 ), rgba( 0, 0, 0, .1 ) );
     }
     @include large-phone {
-      background-image: url('../images/#{$hero-background}-767.jpg');
+      background-image: url('../images/#{$hero-background}-767.jpg'), linear-gradient( rgba( 0, 0, 0, .1 ), rgba( 0, 0, 0, .1 ) );
     }
     @include phone {
-      background-image: url('../images/#{$hero-background}-479.jpg');
+      background-image: url('../images/#{$hero-background}-479.jpg'), linear-gradient( rgba( 0, 0, 0, .1 ), rgba( 0, 0, 0, .1 ) );
+      background-position: top;
     }
   }
 }
@@ -399,7 +401,7 @@ body {
 // }
 
 .learn_more_btn {
-  padding: 12px 55px 12px 30px;
+  padding: 12px 55px 10px 30px;
   background-image: url('../images/arrow_white.png');
   background-position: 89% 50%;
   background-repeat: no-repeat;
@@ -407,7 +409,7 @@ body {
   text-shadow: none;
   margin:5px;
   line-height: 1.125;
-  @include ui-button(#c7ddf3, #000);
+  @include ui-button(#c7ddf3, #000, #000);
   &.top_padding {
     margin-top: 52px;
   }
@@ -568,8 +570,8 @@ body {
   padding-bottom: 30px;
   border-top: 1px none hsla(86, 58%, 77%, .25);
   background-color: transparent;
-  background-image: -webkit-linear-gradient(90deg, rgba(3, 32, 18, .7), rgba(3, 32, 18, 0));
-  background-image: linear-gradient(0deg, rgba(3, 32, 18, .7), rgba(3, 32, 18, 0));
+  background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
   text-align: center;
   @include large-phone {
     position: absolute;
@@ -632,14 +634,16 @@ body {
     display: none;
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color: #8a1e04;
+    background-color: #000;
     text-align: center;
     @include phone {
       display: block;
     }
   }
 }
-
+.mobile_phone_btn {
+  text-decoration: none;
+}
 .main_message__headline {
   &--1 {
     min-height: auto;
@@ -654,7 +658,6 @@ body {
     text-transform: none;
     text-shadow: none;
     @include tablet {
-      color: #b4f858;
       font-size: 56px;
     }
     @include large-phone {
@@ -671,7 +674,6 @@ body {
     line-height: 1.125;
     font-weight: 400;
     @include tablet {
-      color: #8dc63f;
       font-size: 24px;
     }
     @include large-phone {
@@ -691,7 +693,7 @@ body {
   margin-bottom: 30px;
   padding-right: 71px;
   color: #fff;
-  font-size: 31px;
+  font-size: 24px;
   line-height: 1.5;
   font-weight: 300;
   @include tablet {
@@ -1128,10 +1130,9 @@ body {
 
 .important-text {
   color: #fff;
-}
-
-.important-text-2 {
-  color: #8a1e04;
+  &--2 {
+    color: #8a1e04;
+  }
 }
 
 .text-block {

@@ -7,7 +7,7 @@ Glacial Landing Page Based on King LASIK Landing Page.
 # Generic Landing Page
 
 ## Project Goals
- - To Create a sustainable, modular Landing Page System That can be used to create landing pages.
+ - To create a sustainable, modular landing page system That can be used to create landing pages.
 ## Short term goals
   - Make markup generic, document build process.
 ## Gulp command options
@@ -26,6 +26,6 @@ Glacial Landing Page Based on King LASIK Landing Page.
   - c. install Gulp globally through npm.
   - d. download project files.
   - e. run gulp through the node.js command line. refer to gulp commands above.
-2. BEMIT structure
+2. Structure
   - css/ - base directory
   - css/partials - partials

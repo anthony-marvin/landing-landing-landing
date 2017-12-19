@@ -114,18 +114,6 @@ body {
   }
 }
 
-
-.why_section {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: #e4fafa;
-  text-align: center;
-  @include phone {
-    padding-top: 75px;
-    padding-bottom: 50px;
-  }
-}
-
 .container_div {
   display: inline-block;
   width: 80%;
@@ -133,7 +121,69 @@ body {
     width: 90%;
   }
 }
-
+.section {
+  padding-top: 100px;
+  padding-bottom: 150px;
+  @include tablet {
+    padding-top: 50px;
+    padding-bottom: 75px;
+  }
+  &--review {
+    text-align: center;
+  }
+  &--self-test {
+    background-color: #e4fafa;
+    text-align: center;
+  }
+  &--what_is {
+    background-color: #fff;
+    text-align: center;
+  }
+  &--why {
+    background-color: #e4fafa;
+    text-align: center;
+  }
+  &--financing {
+    text-align: center;
+  }
+  &--location {
+    @include tablet {
+      padding-right: 31px;
+      padding-left: 31px;
+    }
+    @include large-phone {
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+    @include phone {
+      padding-top: 50px;
+      padding-right: 21px;
+      padding-left: 21px;
+    }
+  }
+  &--footer {
+    padding: 100px 80px 150px;
+    border-top: 1px solid rgba(96, 56, 19, .22);
+    background-color: $main-site-color-1;
+    background-image: none;
+    text-align: left;
+    @include tablet {
+      padding-right: 57px;
+      padding-left: 57px;
+    }
+    @include large-phone {
+      padding: 50px 20px 75px;
+    }
+  }
+  &--consultation {
+    background-color: #e4fafa;
+    text-align: center;
+    @include large-phone {
+      padding-top: 75px;
+      padding-bottom: 0px;
+    }
+  }
+}
 .section_headline {
   margin-top: 0px;
   margin-bottom: 50px;
@@ -175,74 +225,7 @@ body {
   }
 }
 
-.what_is_section {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: #fff;
-  text-align: center;
-  @include phone {
-    padding-top: 50px;
-    padding-bottom: 75px;
-  }
-}
 
-.blade_free_lasik {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: #e4fafa;
-  text-align: center;
-  @include large-phone {
-    padding-top: 75px;
-    padding-bottom: 0px;
-  }
-}
-
-.selftest_section {
-  padding-top: 100px;
-  padding-bottom: 150px;
-  background-color: #e4fafa;
-  text-align: center;
-  @include tablet {
-    padding-top: 50px;
-    padding-bottom: 75px;
-  }
-  @include large-phone {
-    padding-bottom: 50px;
-  }
-}
-
-.financing_section {
-  padding-top: 100px;
-  padding-bottom: 200px;
-  text-align: center;
-  @include tablet {
-    padding-top: 75px;
-    padding-bottom: 100px;
-  }
-  @include large-phone {
-    padding-top: 50px;
-    padding-bottom: 75px;
-  }
-}
-
-.locations_section {
-  padding: 150px 80px;
-  @include tablet {
-    padding-right: 31px;
-    padding-left: 31px;
-  }
-  @include large-phone {
-    padding-top: 75px;
-    padding-bottom: 75px;
-  }
-  @include phone {
-    padding-top: 50px;
-    padding-right: 21px;
-    padding-left: 21px;
-  }
-}
 
 .location--bg {
   background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('../images/#{$location-background}-1920.jpg');
@@ -352,20 +335,6 @@ body {
   height: 200px;
 }
 
-.footer_section {
-  padding: 100px 80px 150px;
-  border-top: 1px solid rgba(96, 56, 19, .22);
-  background-color: $main-site-color-1;
-  background-image: none;
-  text-align: left;
-  @include tablet {
-    padding-right: 57px;
-    padding-left: 57px;
-  }
-  @include large-phone {
-    padding: 50px 20px 75px;
-  }
-}
 
 .footer_div {
   width: 40%;
@@ -880,14 +849,6 @@ body {
   }
 }
 
-.review_section {
-  padding-top: 100px;
-  padding-bottom: 200px;
-  text-align: center;
-  @include tablet {
-    padding-bottom: 75px;
-  }
-}
 
 .testimonials_holder_div {
   display: -webkit-box;

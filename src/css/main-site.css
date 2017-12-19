@@ -129,20 +129,6 @@ body {
   }
 }
 
-.why_section {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: #e4fafa;
-  text-align: center;
-}
-
-@media (max-width: 479px) {
-  .why_section {
-    padding-top: 75px;
-    padding-bottom: 50px;
-  }
-}
-
 .container_div {
   display: inline-block;
   width: 80%;
@@ -151,6 +137,96 @@ body {
 @media (max-width: 991px) {
   .container_div {
     width: 90%;
+  }
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+@media (max-width: 991px) {
+  .section {
+    padding-top: 50px;
+    padding-bottom: 75px;
+  }
+}
+
+.section--review {
+  text-align: center;
+}
+
+.section--self-test {
+  background-color: #e4fafa;
+  text-align: center;
+}
+
+.section--what_is {
+  background-color: #fff;
+  text-align: center;
+}
+
+.section--why {
+  background-color: #e4fafa;
+  text-align: center;
+}
+
+.section--financing {
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .section--location {
+    padding-right: 31px;
+    padding-left: 31px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section--location {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}
+
+@media (max-width: 479px) {
+  .section--location {
+    padding-top: 50px;
+    padding-right: 21px;
+    padding-left: 21px;
+  }
+}
+
+.section--footer {
+  padding: 100px 80px 150px;
+  border-top: 1px solid rgba(96, 56, 19, 0.22);
+  background-color: #c7ddf3;
+  background-image: none;
+  text-align: left;
+}
+
+@media (max-width: 991px) {
+  .section--footer {
+    padding-right: 57px;
+    padding-left: 57px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section--footer {
+    padding: 50px 20px 75px;
+  }
+}
+
+.section--consultation {
+  background-color: #e4fafa;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .section--consultation {
+    padding-top: 75px;
+    padding-bottom: 0px;
   }
 }
 
@@ -199,102 +275,6 @@ body {
 @media (max-width: 767px) {
   .section_text.king {
     padding-right: 0px;
-  }
-}
-
-.what_is_section {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: #fff;
-  text-align: center;
-}
-
-@media (max-width: 479px) {
-  .what_is_section {
-    padding-top: 50px;
-    padding-bottom: 75px;
-  }
-}
-
-.blade_free_lasik {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: #e4fafa;
-  text-align: center;
-}
-
-@media (max-width: 767px) {
-  .blade_free_lasik {
-    padding-top: 75px;
-    padding-bottom: 0px;
-  }
-}
-
-.selftest_section {
-  padding-top: 100px;
-  padding-bottom: 150px;
-  background-color: #e4fafa;
-  text-align: center;
-}
-
-@media (max-width: 991px) {
-  .selftest_section {
-    padding-top: 50px;
-    padding-bottom: 75px;
-  }
-}
-
-@media (max-width: 767px) {
-  .selftest_section {
-    padding-bottom: 50px;
-  }
-}
-
-.financing_section {
-  padding-top: 100px;
-  padding-bottom: 200px;
-  text-align: center;
-}
-
-@media (max-width: 991px) {
-  .financing_section {
-    padding-top: 75px;
-    padding-bottom: 100px;
-  }
-}
-
-@media (max-width: 767px) {
-  .financing_section {
-    padding-top: 50px;
-    padding-bottom: 75px;
-  }
-}
-
-.locations_section {
-  padding: 150px 80px;
-}
-
-@media (max-width: 991px) {
-  .locations_section {
-    padding-right: 31px;
-    padding-left: 31px;
-  }
-}
-
-@media (max-width: 767px) {
-  .locations_section {
-    padding-top: 75px;
-    padding-bottom: 75px;
-  }
-}
-
-@media (max-width: 479px) {
-  .locations_section {
-    padding-top: 50px;
-    padding-right: 21px;
-    padding-left: 21px;
   }
 }
 
@@ -438,27 +418,6 @@ body {
 
 .map {
   height: 200px;
-}
-
-.footer_section {
-  padding: 100px 80px 150px;
-  border-top: 1px solid rgba(96, 56, 19, 0.22);
-  background-color: #c7ddf3;
-  background-image: none;
-  text-align: left;
-}
-
-@media (max-width: 991px) {
-  .footer_section {
-    padding-right: 57px;
-    padding-left: 57px;
-  }
-}
-
-@media (max-width: 767px) {
-  .footer_section {
-    padding: 50px 20px 75px;
-  }
 }
 
 .footer_div {
@@ -1071,18 +1030,6 @@ body {
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
-  }
-}
-
-.review_section {
-  padding-top: 100px;
-  padding-bottom: 200px;
-  text-align: center;
-}
-
-@media (max-width: 991px) {
-  .review_section {
-    padding-bottom: 75px;
   }
 }
 

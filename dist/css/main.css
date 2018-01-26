@@ -2265,6 +2265,10 @@ body {
   line-height: 1.5;
 }
 
+a {
+  color: inherit;
+}
+
 .navbar {
   position: absolute;
   display: block;
@@ -2402,98 +2406,30 @@ body {
 .section {
   padding-top: 100px;
   padding-bottom: 150px;
-}
-
-.section--review {
   text-align: center;
 }
 
 @media (max-width: 991px) {
-  .section--review {
+  .section {
+    padding-top: 50px;
     padding-bottom: 75px;
   }
 }
 
 .section--self-test {
   background-color: #e4fafa;
-  text-align: center;
-}
-
-@media (max-width: 991px) {
-  .section--self-test {
-    padding-top: 50px;
-    padding-bottom: 75px;
-  }
-}
-
-@media (max-width: 767px) {
-  .section--self-test {
-    padding-bottom: 50px;
-  }
 }
 
 .section--what_is {
   background-color: #fff;
-  text-align: center;
-}
-
-@media (max-width: 479px) {
-  .section--what_is {
-    padding-top: 50px;
-    padding-bottom: 75px;
-  }
 }
 
 .section--why {
   background-color: #e4fafa;
-  text-align: center;
 }
 
-@media (max-width: 479px) {
-  .section--why {
-    padding-top: 75px;
-    padding-bottom: 50px;
-  }
-}
-
-.section--financing {
-  text-align: center;
-}
-
-@media (max-width: 991px) {
-  .section--financing {
-    padding-top: 75px;
-    padding-bottom: 100px;
-  }
-}
-
-@media (max-width: 767px) {
-  .section--financing {
-    padding-top: 50px;
-    padding-bottom: 75px;
-  }
-}
-
-@media (max-width: 991px) {
-  .section--location {
-    padding-right: 31px;
-    padding-left: 31px;
-  }
-}
-
-@media (max-width: 767px) {
-  .section--location {
-    padding-top: 75px;
-    padding-bottom: 75px;
-  }
-}
-
-@media (max-width: 479px) {
-  .section--location {
-    padding-top: 50px;
-    padding-right: 21px;
-    padding-left: 21px;
-  }
+.section--location {
+  padding: 45px 0;
 }
 
 .section--footer {
@@ -2558,7 +2494,7 @@ body {
 }
 
 .section_text {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   color: #58483e;
   font-size: 16px;
   line-height: 1.5;
@@ -2575,6 +2511,50 @@ body {
   .section_text.king {
     padding-right: 0px;
   }
+}
+
+.location_headline {
+  margin-top: 0px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(201, 230, 162, 0.4);
+  color: #000;
+  font-size: 26px;
+  line-height: 1.125;
+  font-weight: 300;
+}
+
+.location_info_container {
+  text-align: left;
+  padding: 0 120px;
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .location_info_container {
+    padding: 0 50px;
+  }
+}
+
+.location_info {
+  padding: 15px 0;
+  border-bottom: 1px #e0dede solid;
+}
+
+.location_info__heading {
+  color: #000;
+  font-weight: 300;
+  line-height: 1.125;
+  margin: 0;
+  font-size: 15px;
+}
+
+.location_info__text {
+  line-height: 1.5;
+  color: #000;
+}
+
+.location_info__text iframe {
+  min-height: 200px;
 }
 
 .location--bg {
@@ -2668,17 +2648,6 @@ body {
   }
 }
 
-.location_headline {
-  height: 60px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid rgba(201, 230, 162, 0.4);
-  color: #fff;
-  font-size: 26px;
-  line-height: 1.125;
-  font-weight: 300;
-}
-
 .address_txt {
   margin-bottom: 20px;
   color: #fff;
@@ -2713,6 +2682,7 @@ body {
 
 .map_div {
   box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.56);
+  height: 600px;
 }
 
 .map {
@@ -2951,7 +2921,7 @@ body {
 .main_message {
   position: absolute;
   left: 0px;
-  top: 25%;
+  top: 22%;
   z-index: 50;
   width: 50%;
   padding-top: 29px;
@@ -3025,7 +2995,7 @@ body {
   background-color: transparent;
   font-family: 'Roboto Condensed', sans-serif;
   color: #fff;
-  font-size: 68px;
+  font-size: 58px;
   line-height: 1.125;
   font-weight: 700;
   letter-spacing: -1px;
@@ -3048,7 +3018,7 @@ body {
 
 .main_message__headline--2 {
   margin-top: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-family: 'Roboto Condensed', sans-serif;
   color: #fff;
   font-size: 30px;
@@ -3079,7 +3049,7 @@ body {
 }
 
 .main_message__text {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding-right: 71px;
   color: #fff;
   font-size: 24px;
@@ -3116,7 +3086,7 @@ body {
   background-position: 10px 50%;
   background-size: 32px;
   background-repeat: no-repeat;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.125;
   font-weight: 400;
   margin-top: 10px;
@@ -3718,5 +3688,11 @@ html.w-mod-js *[data-ix="scroll-navbar-zero"] {
 @media (max-width: 767px) {
   .column_video {
     margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 479px) {
+  .lity-iframe-container {
+    min-height: 340px;
   }
 }

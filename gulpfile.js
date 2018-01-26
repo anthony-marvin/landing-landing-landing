@@ -41,7 +41,7 @@ gulp.task( 'critical', function(){
     .pipe(gulp.dest( 'dist/js/' ))
   })
   gulp.task('imagemin', () =>
-  gulp.src('src/**/*')
+  gulp.src(['src/**/*', '!src/**/*.js', '!src/**/*.css', '!src/**/*.scss'])
   .pipe(imagemin([
     imagemin.gifsicle({interlaced: true}),
     imagemin.jpegtran({progressive: true}),
